@@ -92,7 +92,7 @@ jobs:
       env:
        GITHUB_TOKEN: ${{ secrets.TEST }}
       with:
-       tag_name: Ulefone_Armor_7_Q-V3.02
+       tag_name: Ulefone_Armor_7_Q-V3_02
        name: TWRP37x_11
        files: | 
          twrp/out/target/product/Armor_7_Q/recovery*.img
