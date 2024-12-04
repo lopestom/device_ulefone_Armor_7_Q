@@ -50,9 +50,9 @@ Some tests was made:
 <details><summary>TWRP Pictures - Click to open</summary>
 <p>
 
-![Decryption](https://github.com/lopestom/)
-![Decrypted](https://github.com/lopestom/)
+![Screenshot_2021-01-01-03-16-41_resized](https://github.com/user-attachments/assets/f4e31d85-332c-4707-a969-d543aa11fcee) ![Screenshot_2021-01-01-09-06-11_resized](https://github.com/user-attachments/assets/e607c0a4-347a-40ce-b914-c16c965ad9fb) ![Screenshot_2021-01-01-03-05-09_resized](https://github.com/user-attachments/assets/a25fd62b-2242-4001-bda5-f28c99e1a041)
 
+![Screenshot_2021-01-01-03-16-51_resized](https://github.com/user-attachments/assets/a72a5496-37a5-463e-b00f-dc1f3fd1a09e) ![Screenshot_2021-01-01-03-16-56_resized](https://github.com/user-attachments/assets/ce6dd732-8d5f-4de1-be99-06fa16372246)
 </p>
 </details>
 
