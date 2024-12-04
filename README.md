@@ -7,7 +7,7 @@
 ## Status
 This branch twrp-11 has ***encrypt/decrypt*** files and option to more test with that.
 
-**Repository Views** 
+**Repository Views** ![Views](https://profile-counter.glitch.me/device_ulefone_Armor_7_Q/count.svg)
 
 [![download](https://img.shields.io/github/downloads/lopestom/device_ulefone_Armor_7_Q/total)](https://github.com/lopestom/device_ulefone_Armor_7_Q/releases/download/Ulefone_Armor_7_Q-V3_02/recovery-Armor_7_Q-A11-20241201.img)
 -------------------------------
