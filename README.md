@@ -46,7 +46,7 @@ Some tests was made:
   - [X] Remove \system\recovery-from-boot.p
   - [X] Fastbootd
   - [X] Decrypt \Data
-  - [?] RW process
+  - [?] RW process (maybe work)
 
 </p>
 </details>
@@ -64,7 +64,7 @@ Some tests was made:
 
 - [2mkl from 4pda](https://4pda.to/forum/index.php?showuser=254002) for tests.
 - [TeamWin](https://github.com/TeamWin) for TWRP SC.
-  * TWRP version 3.7.1_12
+  * TWRP version 3.7.0_11
 
 -----
 
