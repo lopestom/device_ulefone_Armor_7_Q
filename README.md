@@ -38,11 +38,15 @@ Some tests was made:
 
 - MT6779 - A11
   - Status: booted??
-  - [?] booted
+  - [X] booted
 
    - recovery-Armor_7_Q-A11-2024mmdd.img => Working?? Not working?
-  - [?] Working
+  - [X] Working
   - [X] CPU/temperature correct
+  - [X] Remove \system\recovery-from-boot.p
+  - [X] Fastbootd
+  - [X] Decrypt \Data
+  - [?] RW process
 
 </p>
 </details>
