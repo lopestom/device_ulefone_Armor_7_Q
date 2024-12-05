@@ -1,5 +1,6 @@
-[![OFRP Build](https://github.com/lopestom/device_ulefone_Armor_7_Q/actions/workflows/OFRP_build.yml/badge.svg?event=release)](https://github.com/lopestom/device_ulefone_Armor_7_Q/actions/workflows/OFRP_build.yml) [![GitHub Release](https://img.shields.io/github/release/lopestom/device_ulefone_Armor_7_Q.svg?logo=github)](https://github.com/lopestom/device_ulefone_Armor_7_Q/releases) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![OFRP Build](https://github.com/lopestom/device_ulefone_Armor_7_Q/actions/workflows/OFRP_build.yml/badge.svg?event=release)](https://github.com/lopestom/device_ulefone_Armor_7_Q/actions/workflows/OFRP_build.yml) [![GitHub Release](https://img.shields.io/github/release/lopestom/device_ulefone_Armor_7_Q.svg?logo=github)](https://github.com/lopestom/device_ulefone_Armor_7_Q/releases/tag/12180936327) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 -------------------------------
+
 ## OFRP device tree for Ulefone Armor 7 (aka Armor_7_Q)
 ### Helio P90 - MT6779 - A9 - updated to A10
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate?token=Cxr1xP4Yr_XgV2E5lpC6Oo4qvbqmPiS3TgR6aiMEnQUgxr_nP242Z6zMqzeluThwaikNL-FXe8RnA1pT) to TeamWin so any donation is highly appreciated!
