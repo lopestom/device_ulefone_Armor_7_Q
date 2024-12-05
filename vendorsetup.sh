@@ -17,6 +17,27 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
+#!/bin/bash
+
+FDEVICE="Armor_7_Q"
+
+fox_get_target_device() {
+local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
+   if [ -n "$chkdev" ]; then
+      FOX_BUILD_DEVICE="$FDEVICE"
+   else
+      chkdev=$(set | grep BASH_ARGV | grep \"$FDEVICE\")
+      [ -n "$chkdev" ] && FOX_BUILD_DEVICE="$FDEVICE"
+   fi
+}
+
+if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
+   fox_get_target_device
+fi
+
+export DEVICE="Armor_7_Q"
+export OEM="Ulefone"
+
 
 FOX_MANIFEST_ROOT=$(gettop)
 if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox.mk ]; then
@@ -37,12 +58,13 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
     export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
     export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
     export OF_MAINTAINER="lopestom"
-
+#    export FOX_VARIANT="A12+"
+    
     # Custom pic for the maintainer's info in about section
     export OF_MAINTAINER_AVATAR="$PWD/device/ulefone/Armor_7_Q/maintainer.png"
 
     # Magiskboot
-    export OF_USE_MAGISKBOOT=1
+    export OF_USE_MAGISKBOOT=0
     export OF_AB_DEVICE=0
 #    export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 
@@ -53,15 +75,15 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
     # Binaries
     export FOX_USE_BASH_SHELL=1
     export FOX_ASH_IS_BASH=1
-    export FOX_USE_NANO_EDITOR=1
+    export FOX_USE_NANO_EDITOR=0
     export FOX_USE_GREP_BINARY=1
-    export FOX_USE_TAR_BINARY=1
-    export FOX_USE_ZIP_BINARY=1
-    export FOX_USE_SED_BINARY=1
+    export FOX_USE_TAR_BINARY=0
+    export FOX_USE_ZIP_BINARY=0
+    export FOX_USE_SED_BINARY=0
     export FOX_REPLACE_TOOLBOX_GETPROP=1
-    export FOX_USE_XZ_UTILS=1
-    export FOX_REPLACE_BUSYBOX_PS=1
-    export OF_ENABLE_LPTOOLS=1
+    export FOX_USE_XZ_UTILS=0
+    export FOX_REPLACE_BUSYBOX_PS=0
+    export OF_ENABLE_LPTOOLS=0
 
     # Decryption
     export OF_FBE_METADATA_MOUNT_IGNORE=1
