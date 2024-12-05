@@ -151,11 +151,11 @@ on property:twrp.decrypt.done=true && twrp.all.users.decrypted=true
     stop servicemanager
     stop hwservicemanager
 
-on boot
-     start health-hal-2-1
-     setprop sys.usb.config adb
-
 on property:crypto.ready=0
     stop teei_daemon
     stop vendor.keymaster-4-0-beanpod
     stop vendor.gatekeeper-1-0
+
+on boot
+     start health-hal-2-1
+     setprop sys.usb.config adb
