@@ -48,7 +48,8 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
 
     # Build
     export LC_ALL="C"
-    export FOX_VERSION=12.1
+    export FOX_VERSION=11.0
+#    export FOX_VERSION=12.1
     export ALLOW_MISSING_DEPENDENCIES=true
     export TARGET_DEVICE_ALT="Armor_7_Q"
     export OF_VIRTUAL_AB_DEVICE=0
@@ -65,7 +66,7 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
 
     # Magiskboot
     export OF_USE_MAGISKBOOT=0
-    export OF_AB_DEVICE=0
+    export OF_AB_DEVICE=1
 #    export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 
 
