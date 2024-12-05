@@ -1,22 +1,102 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
-# Copyright (C) 2020 The TWRP Open Source Project
+#	This file is part of the OrangeFox Recovery Project
+# 	Copyright (C) 2019-2023 The OrangeFox Recovery Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+#	OrangeFox is free software: you can redistribute it and/or modify
+#	it under the terms of the GNU General Public License as published by
+#	the Free Software Foundation, either version 3 of the License, or
+#	any later version.
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#	OrangeFox is distributed in the hope that it will be useful,
+#	but WITHOUT ANY WARRANTY; without even the implied warranty of
+#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#	GNU General Public License for more details.
 #
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# 	This software is released under GPL version 3 or any later version.
+#	See <http://www.gnu.org/licenses/>.
+#
+# 	Please maintain this if you use this script or any part of it
 #
 
-#add_lunch_combo omni_Armor_7E_Q-userdebug
-#add_lunch_combo omni_Armor_7E_Q-eng
-#add_brunch_combo omni_Armor_7E_Q-eng
-#COMMON_LUNCH_CHOICES omni_Armor_7E_Q-userdebug
-#COMMON_LUNCH_CHOICES omni_Armor_7E_Q-eng
+FOX_MANIFEST_ROOT=$(gettop)
+if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox.mk ]; then
+    if [ -z "$TW_DEFAULT_LANGUAGE" ]; then
+        unset TW_DEFAULT_LANGUAGE
+        export TW_DEFAULT_LANGUAGE="ru"
+    fi
+
+    # Build
+    export LC_ALL="C"
+    export FOX_VERSION=12.1
+    export ALLOW_MISSING_DEPENDENCIES=true
+    export TARGET_DEVICE_ALT="Armor_7_Q"
+    export OF_VIRTUAL_AB_DEVICE=0
+    export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+    export FOX_RECOVERY_RECOVERY_PARTITION="/dev/block/platform/bootdevice/by-name/recovery"
+    export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/bootdevice/by-name/boot"
+    export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+    export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+    export OF_MAINTAINER="lopestom"
+
+    # Custom pic for the maintainer's info in about section
+    export OF_MAINTAINER_AVATAR="$PWD/device/ulefone/Armor_7_Q/maintainer.png"
+
+    # Magiskboot
+    export OF_USE_MAGISKBOOT=1
+    export OF_AB_DEVICE=0
+#    export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+
+
+    # Magisk
+#    export FOX_USE_SPECIFIC_MAGISK_ZIP="$FOX_MANIFEST_ROOT/device/ulefone/Power_Armor_13/Magisk/Magisk-v25.2.zip"
+
+    # Binaries
+    export FOX_USE_BASH_SHELL=1
+    export FOX_ASH_IS_BASH=1
+    export FOX_USE_NANO_EDITOR=1
+    export FOX_USE_GREP_BINARY=1
+    export FOX_USE_TAR_BINARY=1
+    export FOX_USE_ZIP_BINARY=1
+    export FOX_USE_SED_BINARY=1
+    export FOX_REPLACE_TOOLBOX_GETPROP=1
+    export FOX_USE_XZ_UTILS=1
+    export FOX_REPLACE_BUSYBOX_PS=1
+    export OF_ENABLE_LPTOOLS=1
+
+    # Decryption
+    export OF_FBE_METADATA_MOUNT_IGNORE=1
+    export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
+    export OF_NO_RELOAD_AFTER_DECRYPTION=1
+
+    # Screen
+    export OF_SCREEN_H=2340
+    export OF_STATUS_H=50
+    export OF_STATUS_INDENT_LEFT=48
+    export OF_STATUS_INDENT_RIGHT=48
+    export OF_HIDE_NOTCH=1
+    export OF_CLOCK_POS=0
+    export OF_ALLOW_DISABLE_NAVBAR=0
+
+    # Backup
+    export OF_QUICK_BACKUP_LIST="/recovery;/boot;/persist;/data;/nvram;"
+
+    # OTA
+    # export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+
+    # Others
+    export OF_USE_GREEN_LED=0
+    export OF_FLASHLIGHT_ENABLE=0
+    export OF_DISABLE_KEYMASTER2=1
+    export FOX_REMOVE_AAPT=1
+    export FOX_DRASTIC_SIZE_REDUCTION=1
+
+
+
+    if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
+        export | grep "FOX" >>$FOX_BUILD_LOG_FILE
+        export | grep "OF_" >>$FOX_BUILD_LOG_FILE
+        export | grep "TARGET_" >>$FOX_BUILD_LOG_FILE
+        export | grep "TW_" >>$FOX_BUILD_LOG_FILE
+    fi
+fi
