@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-12.1
   DEVICE: Armor_7_Q
   DT_LINK: https://github.com/lopestom/device_ulefone_Armor_7_Q
   DT_PATH: device/ulefone/Armor_7_Q
@@ -85,14 +85,14 @@ jobs:
        PATH=~/bin:$PATH
        cd twrp
        export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh && lunch twrp_Armor_7_Q-eng && mka $TARGET -j$(nproc --all)
-       cp  out/target/product/Armor_7_Q/recovery.img    out/target/product/Armor_7_Q/recovery-Armor_7_Q-A11-$(date +"%Y%m%d").img
+       cp  out/target/product/Armor_7_Q/recovery.img    out/target/product/Armor_7_Q/recovery-Armor_7_Q-A12-$(date +"%Y%m%d").img
              
     - name: Release recovery image
       uses: softprops/action-gh-release@v1
       env:
        GITHUB_TOKEN: ${{ secrets.TEST }}
       with:
-       tag_name: Ulefone_Armor_7_Q-V3_02
-       name: TWRP37x_11
+       tag_name: Ulefone_Armor_7_Q-V302
+       name: TWRP37x_12
        files: | 
          twrp/out/target/product/Armor_7_Q/recovery*.img
