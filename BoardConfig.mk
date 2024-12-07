@@ -62,7 +62,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.boot_devices=bootdevice
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -172,15 +172,11 @@ BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
-    libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client
+    libpuresoftkeymasterdevice
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # AVB - Android Verified Boot / dm-verity
 BOARD_AVB_ENABLE := true
