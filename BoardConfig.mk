@@ -145,6 +145,7 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 # fscrypt policy FBEv1
 TW_USE_FSCRYPT_POLICY := 1
 TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_FORCE_KEYMASTER_VER := true
 
 #TW_CRYPTO_FS_TYPE := "f2fs"
 #TW_CRYPTO_REAL_BLKDEV := "/dev/block/by-name/userdata"
