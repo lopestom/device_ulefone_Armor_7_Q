@@ -15,8 +15,8 @@
 # limitations under the License.
 #
 
-#add_lunch_combo omni_Armor_7E_Q-userdebug
-#add_lunch_combo omni_Armor_7E_Q-eng
-#add_brunch_combo omni_Armor_7E_Q-eng
-#COMMON_LUNCH_CHOICES omni_Armor_7E_Q-userdebug
-#COMMON_LUNCH_CHOICES omni_Armor_7E_Q-eng
+#add_lunch_combo omni_X688B-userdebug
+#add_lunch_combo omni_X688B-eng
+#add_brunch_combo omni_X688B-eng
+#COMMON_LUNCH_CHOICES omni_X688B-userdebug
+#COMMON_LUNCH_CHOICES omni_X688B-eng
