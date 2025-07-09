@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/ulefone/Armor_7_Q
+LOCAL_PATH := device/infinix/X688B
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -25,7 +25,7 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-PRODUCT_PLATFORM := mt6779
+PRODUCT_PLATFORM := mt6765
     
 # Fastbootd stuff
 PRODUCT_PACKAGES += \

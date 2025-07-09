@@ -1,21 +1,23 @@
 #from device
-ro.boot.hardware=mt6779
-ro.vendor.mediatek.platform=MT6779
-ro.hardware=mt6779
-ro.hardware.egl=mtk
-ro.vendor.mtk_f2fs_enable=0
+ro.boot.hardware=mt6765
+ro.vendor.mediatek.platform=MT6765
+ro.hardware=mt6765
+ro.hardware.egl=meow
+ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1
-ro.vendor.mtk_ufs_support=1
-ro.vendor.mtk_microtrust_tee_support=1
-ro.odm.tee=2
-ro.odm.fingerprint=sw_tee_none_android9
+ro.sf.lcd_density=320
+ro.vendor.tran.version.release=X688B-H659ABCDEFGHIJKLMNO-R-GL-211111V276
+ro.product.tran.version.release=X688B-H659ABCDEFGHIJKLMNO-R-GL-211111V383
+init.userspace_reboot.is_supported=true
+# TEE
 ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
+ro.vendor.mtk_microtrust_tee_support=1
+ro.vendor.trans_pay_tee=1
+ro.hardware.paytrigger=beanpod
 ro.crypto.volume.filenames_mode=aes-256-cts
-ro.sf.lcd_density=480
 # identity
 Build.BRAND=MTK
-#ro.vendor.beanpod.tface=tface
 ro.boot.avb_version=1.1
 ro.boot.vbmeta.avb_version=1.1
 # end common build properties

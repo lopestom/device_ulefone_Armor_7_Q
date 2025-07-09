@@ -1,32 +1,31 @@
-[![GitHub Release](https://img.shields.io/github/release/lopestom/device_ulefone_Armor_7_Q.svg?logo=github)](https://github.com/lopestom/device_ulefone_Armor_7_Q/releases) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![GitHub Release](https://img.shields.io/github/release/lopestom/device_infinix_X688B.svg?logo=github)](https://github.com/lopestom/device_infinix_X688B/releases) [![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 -------------------------------
-## TWRP device tree for Ulefone Armor 7 (aka Armor_7_Q)
+## TWRP device tree for Ulefone Armor 7 (aka X688B)
 ### Helio P90 - MT6779 - A9 - updated to A10
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate?token=Cxr1xP4Yr_XgV2E5lpC6Oo4qvbqmPiS3TgR6aiMEnQUgxr_nP242Z6zMqzeluThwaikNL-FXe8RnA1pT) to TeamWin so any donation is highly appreciated!
 
 ## Status
 This branch twrp-11 has ***encrypt/decrypt*** files and option to more test with that.
 
-**Repository Views** ![Views](https://profile-counter.glitch.me/device_ulefone_Armor_7_Q/count.svg)
+**Repository Views** ![Views](https://profile-counter.glitch.me/device_infinix_X688B/count.svg)
 
-[![download](https://img.shields.io/github/downloads/lopestom/device_ulefone_Armor_7_Q/total)](https://github.com/lopestom/device_ulefone_Armor_7_Q/releases/download/Ulefone_Armor_7_Q-V3_02/recovery-Armor_7_Q-A11-20241201.img)
+[![download](https://img.shields.io/github/downloads/lopestom/device_infinix_X688B/total)](https://github.com/lopestom/device_infinix_X688B/releases/download/Ulefone_X688B/recovery-X688B-A11-20241201.img)
 -------------------------------
 
 ### Firmware version:
-GQ3083TF6_KSX90TQ_ulefone_20210719_V02_Non_EU.zip
-Armor_7_TF4_V02 - X90TQ88C.GQU.Ulefonetf6.AQ.HB.FHD.AYAZYDVF.1119.V3.02 -- GQ3083TF6_KSX90TQ_Ulefone_20210719_V02
+Infinix_X688B_MT6765_H659ABCDEFGHIJKLMNO_OS11.rar
+X688B-H659ABCDEFGHIJKLMNO-R-GL-211111V276 -- x688b_h659
 
 ## Device
 
-Specs [here](https://www.gsmarena.com/ulefone_armor_7-10020.php)
+Specs [here](https://www.devicespecifications.com/en/model/609b5630)
 
-https://www.kimovil.com/en/where-to-buy-ulefone-armor-7
 
-![Ulefone Armor_7](https://cdn-files.kimovil.com/default/0003/74/thumb_273086_default_big.jpeg)
+![Infinix Hot](https://fdn2.gsmarena.com/vv/pics/infinix/infinix-hot10-play-2.jpg)
 
 ### Status
 
-The tester only install `recovery-Armor_7_Q-A11-2024mmdd.img` file to know if working.
+The tester only install `recovery-X688B-A11-2025mmdd.img` file to know if working.
 <details><summary>History - Click to open</summary>
 <p>
 Some tests was made:
@@ -34,35 +33,32 @@ Some tests was made:
 ### First img Test
 
 * Initial DT: 2024-11-30
-   Compiled img file 2024mmdd and tested in 2024mmdd
+   Compiled img file 2025mmdd and tested in 2025mmdd
 
 - MT6779 - A11
   - Status: booted??
   - [X] booted
 
-   - recovery-Armor_7_Q-A11-2024mmdd.img => Working?? Not working?
-  - [X] Working
-  - [X] CPU/temperature correct
-  - [X] Remove \system\recovery-from-boot.p
-  - [X] Fastbootd
-  - [X] Decrypt \Data
-  - [?] RW process (maybe work)
+   - recovery-X688B-A11-2025mmdd.img => Working?? Not working?
+  - [ ] Working
+  - [ ] CPU/temperature correct
+  - [ ] Remove \system\recovery-from-boot.p
+  - [ ] Fastbootd
+  - [ ] Decrypt \Data
+  - [ ] RW process (maybe work)
 
 </p>
 </details>
 
 <details><summary>TWRP Pictures - Click to open</summary>
 <p>
-
-![Screenshot_2021-01-01-03-16-41_resized](https://github.com/user-attachments/assets/f4e31d85-332c-4707-a969-d543aa11fcee) ![Screenshot_2021-01-01-09-06-11_resized](https://github.com/user-attachments/assets/e607c0a4-347a-40ce-b914-c16c965ad9fb) ![Screenshot_2021-01-01-03-05-09_resized](https://github.com/user-attachments/assets/a25fd62b-2242-4001-bda5-f28c99e1a041)
-
-![Screenshot_2021-01-01-03-16-51_resized](https://github.com/user-attachments/assets/a72a5496-37a5-463e-b00f-dc1f3fd1a09e) ![Screenshot_2021-01-01-03-16-56_resized](https://github.com/user-attachments/assets/ce6dd732-8d5f-4de1-be99-06fa16372246)
+ 
 </p>
 </details>
 
 #### Big thanks to:
 
-- [2mkl from 4pda](https://4pda.to/forum/index.php?showuser=254002) for tests.
+- [mehanik6 from 4pda](https://4pda.to/forum/index.php?showuser=1348402) for tests.
 - [TeamWin](https://github.com/TeamWin) for TWRP SC.
   * TWRP version 3.7.0_11
 
@@ -89,6 +85,6 @@ fastboot flash recovery recovery.img
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
 . build/envsetup.sh
-lunch twrp_Armor_7_Q-eng
+lunch twrp_X688B-eng
 mka recoveryimage -j$(nproc --all)
 ```
